@@ -1,0 +1,16 @@
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\bin\Release\RemoteScreen.exe
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\bin\Release\RemoteScreen.pdb
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.RemoteScreen.resources
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.Properties.Resources.resources
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.csproj.GenerateResource.Cache
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.exe
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\bin\Release\RemoteScreen.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\bin\Release\RemoteScreen.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\ResolveAssemblyReference.cache
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.RemoteScreen.resources
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.Properties.Resources.resources
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteScreen\obj\Release\RemoteScreen.csproj.GenerateResource.Cache

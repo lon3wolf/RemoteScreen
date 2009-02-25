@@ -1,0 +1,16 @@
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.Form1.resources
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.Properties.Resources.resources
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.csproj.GenerateResource.Cache
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\bin\Debug\RemoteClient.exe
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\bin\Debug\RemoteClient.pdb
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.exe
+C:\Users\Sanil\Documents\Visual Studio 2008\Projects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\bin\Debug\RemoteClient.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\bin\Debug\RemoteClient.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\ResolveAssemblyReference.cache
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.Form1.resources
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.Properties.Resources.resources
+J:\Projects\dotNET\MyProjects\RemoteScreen\RemoteClient\obj\Debug\RemoteClient.csproj.GenerateResource.Cache
