@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteScreen", "RemoteScreen\RemoteScreen.csproj", "{F2FF8F34-967E-4BCE-B744-DF81AF9E864A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteClient", "RemoteClient\RemoteClient.csproj", "{AF6F6287-A680-4550-8437-A22D1D13B451}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RemoteClient\\RemoteClient.csproj
+		SccProjectName1 = RemoteClient
+		SccLocalPath1 = RemoteClient
+		SccProjectUniqueName2 = RemoteScreen\\RemoteScreen.csproj
+		SccProjectName2 = RemoteScreen
+		SccLocalPath2 = RemoteScreen
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2FF8F34-967E-4BCE-B744-DF81AF9E864A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FF8F34-967E-4BCE-B744-DF81AF9E864A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FF8F34-967E-4BCE-B744-DF81AF9E864A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FF8F34-967E-4BCE-B744-DF81AF9E864A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6F6287-A680-4550-8437-A22D1D13B451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6F6287-A680-4550-8437-A22D1D13B451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6F6287-A680-4550-8437-A22D1D13B451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6F6287-A680-4550-8437-A22D1D13B451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
