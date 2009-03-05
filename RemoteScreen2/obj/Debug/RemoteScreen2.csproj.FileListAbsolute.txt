@@ -1,0 +1,5 @@
+J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\bin\Debug\RemoteScreen.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\bin\Debug\RemoteScreen.pdb
+J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\obj\Debug\ResolveAssemblyReference.cache
+J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\obj\Debug\RemoteScreen.exe
+J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\obj\Debug\RemoteScreen.pdb
