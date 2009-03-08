@@ -54,7 +54,7 @@ namespace RemoteScreen
             {
                 server = new Server();
             }
-            server.Serve();
+            server.Serve2();
         }  
     }
 }
