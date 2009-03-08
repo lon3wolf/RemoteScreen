@@ -51,12 +51,37 @@ namespace RemoteScreen
     /// </summary>
     public class PlatformInvokeUSER32
     {
+        #region Class Structs
+        public struct POINT
+        {
+            public int X, Y;
+        };
+
+        public struct CURSORINFO
+        {
+            public int cbSize;
+            public int flags;
+            public IntPtr hCursor;
+            public POINT ptScreenPos;
+        };
+
+        public struct ICONINFO
+        {
+            public bool fIcon;
+            public int xHotspot;
+            public int yHotspot;
+            public IntPtr hbmMask;
+            public IntPtr hbmColor;
+        };
+        #endregion
+
         #region Class Variables
         public const int SM_CXSCREEN = 0;
         public const int SM_CYSCREEN = 1;
         #endregion
 
         #region Class Functions
+
         [DllImport("user32.dll", EntryPoint = "GetDesktopWindow")]
         public static extern IntPtr GetDesktopWindow();
 
@@ -71,6 +96,15 @@ namespace RemoteScreen
 
         [DllImport("user32.dll", EntryPoint = "ReleaseDC")]
         public static extern IntPtr ReleaseDC(IntPtr hWnd, IntPtr hDc);
+
+        [DllImport("user32.dll", EntryPoint = "GetCursorInfo")]
+        public static extern bool GetCursorInfo(ref CURSORINFO pci);
+
+        [DllImport("user32.dll", EntryPoint = "CopyIcon")]
+        public static extern IntPtr CopyIcon(IntPtr IconHandle);
+        
+        [DllImport("user32.dll", EntryPoint = "GetIconInfo")]
+        public static extern bool GetIconInfo(IntPtr hIcon,out PlatformInvokeUSER32.ICONINFO IconInfo);
 
         #endregion
     }
@@ -152,6 +186,59 @@ namespace RemoteScreen
             //If hBitmap is null, retun null.
             return null;
         }
+
+        //Captures Cursor as a bitmap and returns out position of cursor
+        public static Bitmap CaptureCursor(out Point Location)
+        {
+            Bitmap bmp;
+            IntPtr hicon;
+            PlatformInvokeUSER32.CURSORINFO CurInfo= new PlatformInvokeUSER32.CURSORINFO();
+            PlatformInvokeUSER32.ICONINFO IconInfo;
+            CurInfo.cbSize = Marshal.SizeOf(CurInfo);
+            Location = new Point();
+            if (PlatformInvokeUSER32.GetCursorInfo(ref CurInfo))
+            {
+                if (CurInfo.flags != 0) //The cursor is shown
+                {
+                    hicon = PlatformInvokeUSER32.CopyIcon(CurInfo.hCursor);
+                    if (PlatformInvokeUSER32.GetIconInfo(hicon,out IconInfo))
+                    {
+                        Location.X = CurInfo.ptScreenPos.X - ((int)IconInfo.xHotspot);
+                        Location.Y = CurInfo.ptScreenPos.Y - ((int)IconInfo.yHotspot);
+                        Icon ic = Icon.FromHandle(hicon);
+                        bmp = ic.ToBitmap();
+
+                        return bmp;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static Bitmap CaptureDesktopWithCursor()
+        {
+            Point Location;
+            Bitmap desktopBMP;
+            Bitmap cursorBMP;
+            Graphics g;
+            Rectangle r;
+            desktopBMP = GetDesktopImage();
+            cursorBMP = CaptureCursor(out Location);
+            if (desktopBMP != null)
+            {
+                if (cursorBMP != null)
+                {
+                    r = new Rectangle(Location.X, Location.Y,cursorBMP.Width, cursorBMP.Height);
+                    g = Graphics.FromImage(desktopBMP);
+                    g.DrawImage(cursorBMP, r);
+                    g.Flush();
+                    return desktopBMP;
+                }
+                else
+                    return desktopBMP;
+            }
+            return null;
+        }
         #endregion
     }
 
@@ -161,4 +248,5 @@ namespace RemoteScreen
         public int cx;
         public int cy;
     }
+
 }

@@ -72,7 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aasdasd.ico" />
-    <Content Include="sadad.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

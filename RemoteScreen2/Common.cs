@@ -8,11 +8,19 @@ namespace RemoteScreen
     public static class Common
     {
         public const string FilePath = @"C:\sd.jpg";
-
+        
         public static void SaveScreenImage()  //Saves Desktop Image to C:\sd.jpg
         {
-            Bitmap bmp = CaptureScreen.GetDesktopImage();
-            bmp.Save(FilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //Bitmap bmp = CaptureScreen.GetDesktopImage();
+            Bitmap bmp = CaptureScreen.CaptureDesktopWithCursor();
+            try
+            {
+                bmp.Save(FilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            catch(Exception ex)
+            {
+                File.AppendAllText("Log.htm", "<b>SocketException: </b>" + ex.ToString());
+            }
         }
 
         public static byte[] GetLatestImage() //Gets the saved desktop image byte buffer from pre defined source C:\sd.jpg
