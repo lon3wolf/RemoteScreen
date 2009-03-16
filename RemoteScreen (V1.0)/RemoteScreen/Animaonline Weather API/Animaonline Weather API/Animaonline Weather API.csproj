@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98521D45-8A27-48F8-971B-6E4F9CDCA4B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Animaonline</RootNamespace>
+    <AssemblyName>Animaonline Weather API</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Animaonline Weather API.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animaonline.Geo\GeoCoding\GeoNames.cs" />
+    <Compile Include="Animaonline.Geo\GeoCoding\Interfaces\IGeonameData.cs" />
+    <Compile Include="Animaonline.Geo\GeoCoding\GeoCode.cs" />
+    <Compile Include="Animaonline.Geo\Tools\GeoRss.cs" />
+    <Compile Include="Animaonline.Geo\Maps\Google Maps\GoogleMapGenerator.cs" />
+    <Compile Include="Animaonline.Geo\Maps\Google Maps\Interfaces\IGoogleMap.cs" />
+    <Compile Include="Animaonline.Geo\Maps\Google Maps\Properties\GeneratorConstantVariables.cs" />
+    <Compile Include="Animaonline.Globals\ExtensionMethods.cs" />
+    <Compile Include="Animaonline.Globals\IO.cs" />
+    <Compile Include="Animaonline.Globals\Network.cs" />
+    <Compile Include="Animaonline.Globals\Tracer.cs" />
+    <Compile Include="Animaonline.Globals\UnitConversions.cs" />
+    <Compile Include="Animaonline.Hardware\GPS\GPS.cs" />
+    <Compile Include="Animaonline.Hardware\GPS\GPS2.cs" />
+    <Compile Include="Animaonline.Hardware\GPS\Interfaces\IGPS.cs" />
+    <Compile Include="Animaonline.Weather\API\GoogleWeatherAPI.cs" />
+    <Compile Include="Animaonline.Weather\Exceptions\DownloadDataException.cs" />
+    <Compile Include="Animaonline.Weather\Exceptions\UnrecognizedUnitSystemException.cs" />
+    <Compile Include="Animaonline.Weather\Google Weather Data\GoogleWeatherData.cs" />
+    <Compile Include="Animaonline.Weather\Parsers\Properties\ParserConstantVariables.cs" />
+    <Compile Include="Animaonline.Geo\Coordinates.cs" />
+    <Compile Include="Animaonline.Weather\Google Weather Data\CurrentConditions.cs" />
+    <Compile Include="Animaonline.Weather\Google Weather Data\ForecastCondition.cs" />
+    <Compile Include="Animaonline.Weather\Google Weather Data\ForecastInformation.cs" />
+    <Compile Include="Animaonline.Weather\Tools\Functions.cs" />
+    <Compile Include="Animaonline.Weather\Interfaces\IGoogleWeatherData.cs" />
+    <Compile Include="Animaonline.Weather\Interfaces\IForecastCondition.cs" />
+    <Compile Include="Animaonline.Weather\Interfaces\IForecastInformation.cs" />
+    <Compile Include="Animaonline.Weather\Interfaces\ICurrentConditions.cs" />
+    <Compile Include="Animaonline.Geo\ICoordinates.cs" />
+    <Compile Include="Animaonline.Globals\LanguageCode.cs" />
+    <Compile Include="Animaonline.Weather\Data Types\Temperature.cs" />
+    <Compile Include="Animaonline.Weather\Data Types\TemperatureUnits.cs" />
+    <Compile Include="Animaonline.Weather\Parsers\GoogleWeatherFeedParser.cs" />
+    <Compile Include="CLS Compliance.cs" />
+    <Compile Include="Code Analysis\GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Animaonline Weather API.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
