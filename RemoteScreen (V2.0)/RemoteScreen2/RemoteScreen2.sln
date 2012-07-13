@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteScreen2", "RemoteScreen2\RemoteScreen2.csproj", "{2CD91326-D76D-4AF9-84DA-2258FFB70451}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteClient2", "RemoteClient\RemoteClient2.csproj", "{B366247C-5F2C-4547-BB16-2096DE910AC6}"

@@ -14,7 +14,6 @@ namespace RemoteClient
 {
     public partial class Client : Form
     {
-        public const string FilePath = @"C:\rcvd.jpg";
         public int FrameCount = 0;
 
         public Client()
@@ -58,23 +57,20 @@ namespace RemoteClient
                 
                 // Read response
                 int bytes = 0;
-                FileStream fs = new FileStream(FilePath, FileMode.Create);
+                MemoryStream memStream = new MemoryStream();
                 do
                 {
                     bytes = 0;
                     bytes = stream.Read(data, 0, data.Length);
                     if (bytes != 0)
                     {
-                        fs.Write(data, 0, bytes);
+                        memStream.Write(data, 0, bytes);
                     }
                 } while (bytes != 0);
-                fs.Close();
                 stream.Close();
                 client.Close();
-                MemoryStream MemoryImage = new MemoryStream(File.ReadAllBytes(FilePath));
-                RcvdImg.Image = Image.FromStream(MemoryImage);
+                RcvdImg.Image = Image.FromStream(memStream);
                 FrameCount++;
-                File.Delete(FilePath);
             }
             catch (SocketException e)
             {

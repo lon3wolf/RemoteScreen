@@ -10,4 +10,8 @@
    at System.Net.Sockets.Socket.Bind(EndPoint localEP)
    at System.Net.Sockets.TcpListener.Start(Int32 backlog)
    at System.Net.Sockets.TcpListener.Start()
-   at RemoteScreen.Server.Serve() in J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\Server.cs:line 269
+   at RemoteScreen.Server.Serve() in J:\Projects\dotNET\MyProjects\RemoteScreen2\RemoteScreen2\Server.cs:line 269<b>SocketException: </b>System.Runtime.InteropServices.ExternalException: A generic error occurred in GDI+.
+   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at RemoteScreen.Common.SaveScreenImage() in E:\Sanil\Projects\RemoteScreen\RemoteScreen (V2.0)\RemoteScreen2\RemoteScreen2\Common.cs:line 18<b>SocketException: </b>System.Runtime.InteropServices.ExternalException: A generic error occurred in GDI+.
+   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at RemoteScreen.Common.SaveScreenImage() in E:\Sanil\Projects\RemoteScreen\RemoteScreen (V2.0)\RemoteScreen2\RemoteScreen2\Common.cs:line 18
