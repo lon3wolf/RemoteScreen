@@ -7,28 +7,32 @@ namespace RemoteScreen
 {
     public static class Common
     {
-        public const string FilePath = @"C:\sd.jpg";
-        
-        public static void SaveScreenImage()  //Saves Desktop Image to C:\sd.jpg
+        //public static string filePath = Path.Combine(Path.GetTempPath(), "file.jpg");
+        public static MemoryStream memStream;
+
+        public static void SaveScreenImage()  //Saves Desktopubp Image to C:\sd.jpg
         {
             //Bitmap bmp = CaptureScreen.GetDesktopImage();
+            memStream = new MemoryStream();
             Bitmap bmp = CaptureScreen.CaptureDesktopWithCursor();
-            try
-            {
-                bmp.Save(FilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
-            }
-            catch(Exception ex)
-            {
-                File.AppendAllText("Log.htm", "<b>SocketException: </b>" + ex.ToString());
-            }
+            bmp.Save((Stream)memStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            
+            //try
+            //{
+            //    bmp.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //}
+            //catch(Exception ex)
+            //{
+            //    File.AppendAllText("Log.htm", "<b>SocketException: </b>" + ex.ToString());
+            //}
         }
 
         public static byte[] GetLatestImage() //Gets the saved desktop image byte buffer from pre defined source C:\sd.jpg
         {
-            byte[] buf = File.ReadAllBytes(FilePath);
-
-            File.Delete(FilePath);
-
+            //byte[] buf = File.ReadAllBytes(filePath);
+            //File.Delete(filePath);
+            byte[] buf = memStream.GetBuffer();
+            memStream.Dispose();
             return buf;
         }
 
